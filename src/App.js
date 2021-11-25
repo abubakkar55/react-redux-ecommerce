@@ -5,10 +5,13 @@ import CartPage from './pages/CartPage';
 import Header from "./components/Header/Header";
 import Footer from './components/Footer/Footer';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import { Provider } from "react-redux";
+import { store } from './redux/store';
 
 function App() {
   return (
-    <div className="App">
+<Provider store={store}>
+<div className="App">
       <BrowserRouter>
       <Header/>
         <Routes>
@@ -20,6 +23,7 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
+</Provider>
   );
 }
 

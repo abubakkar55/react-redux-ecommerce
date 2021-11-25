@@ -1,0 +1,15 @@
+@import "../Scss/variables.scss";
+.heading{
+position: relative;
+&::before{
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    border-radius: 8rem;
+    width: 10rem;
+    height: .3rem;
+background-color: $main-color;
+}
+}
