@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import "./Header.scss"
 const Header = () => {
   return (
-    <Navbar className="navbar" bg="light" expand="lg">
+    <Navbar sticky="top" className="navbar" bg="light" expand="lg">
       <Container>
         <Navbar.Brand>
           <NavLink to="/" className="navbar__logo"> Redux Ecommerce </NavLink>

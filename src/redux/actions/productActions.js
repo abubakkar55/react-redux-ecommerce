@@ -1,8 +1,17 @@
- const getAllProducts = () =>{
-    return{
-        type:  "GET_ALL_PRODUCTS",
-        payload: []
+const getAllProducts = () => {
+    return {
+        type: "ALL_PRODUCTS",
     }
-}
+};
 
-export { getAllProducts}
+const selectedProduct = (id) => {
+    return {
+        type: "GET_CLICKED_PRODUCT",
+        payload: id
+    }
+};
+
+
+
+
+export { getAllProducts, selectedProduct };
