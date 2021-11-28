@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import "./Header.scss"
+import "../Scss/_Header.scss"
 const Header = () => {
   return (
     <Navbar sticky="top" className="navbar" bg="light" expand="lg">

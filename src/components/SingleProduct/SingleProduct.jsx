@@ -1,14 +1,14 @@
+import currencyFormatter from 'currency-formatter';
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import "./SingleProduct.scss";
 import { NavLink as RouterLink } from 'react-router-dom';
-import currencyFormatter from 'currency-formatter';
+import "../Scss/_SingleProduct.scss";
 
-const SingleProduct = ({ name, id, image, description, discount, discountPrice, price }) => {
+const SingleProduct = ({ name, _id, image, description, discount, discountPrice, price }) => {
     return (
         <Col>
             <Card className="card">
-                <RouterLink to={`/product_details/${id}`}>
+                <RouterLink to={`/product_details/${_id}`}>
                     <div className="card__img"> 
                     <Card.Img variant="top" src={image} />
                     </div>

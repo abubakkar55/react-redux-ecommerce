@@ -1,0 +1,14 @@
+@import "mixings";
+@import "variables";
+@import "Banner";
+@import "ProductDetails";
+@import "SingleProduct";
+@import "Header";
+@import "_Products";
+
+
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

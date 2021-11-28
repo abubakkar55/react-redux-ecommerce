@@ -1,13 +1,16 @@
-const getAllProducts = () => {
+import { actions } from "../constant/action-types";
+
+const getAllProducts = (products) => {
     return {
-        type: "ALL_PRODUCTS",
+        type: actions?.GET_ALL_PRODUCTS,
+        payload: products
     }
 };
 
-const selectedProduct = (id) => {
+const selectedProduct = (product) => {
     return {
-        type: "GET_CLICKED_PRODUCT",
-        payload: id
+        type: actions?.GET_CLICKED_PRODUCT,
+        payload: product
     }
 };
 

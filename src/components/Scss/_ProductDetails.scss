@@ -1,12 +1,21 @@
-@import "../Scss/variables.scss";
+@import "../Scss/variables";
+@import "../Scss/mixings";
 
 .product {
-    &__img{
+    &__details {
+        display: flex;
+
+        @include breakpoints-down-medium {
+            flex-direction: column;
+        }
     }
+
     &__quantity {
         display: flex;
         align-items: center;
-
+        @include breakpoints-down-medium {
+            margin-bottom: 1rem;
+        }
         & button {
             padding: .7rem 1.7rem;
             border: 1px solid #ddd;
@@ -19,6 +28,12 @@
     }
 
     &__btn {
+        margin-left: .7rem;
+
+        @include breakpoints-down-medium {
+            margin-left: 0;
+        }
+
         width: 100%;
         border-radius: .1rem;
         padding: .7rem;

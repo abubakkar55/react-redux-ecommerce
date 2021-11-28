@@ -2,15 +2,24 @@ import React, { useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux'
-import { getAllProducts } from '../../redux/actions/productActions';
 import SingleProduct from './../SingleProduct/SingleProduct';
-import "./Products.scss";
+import "../Scss/_Products.scss";
+import axios from "axios"
+import { getAllProducts } from '../../redux/actions/productActions';
 const Products = () => {
-    const allProducts = useSelector(state => state?.allProductReducer);
+    const allProducts = useSelector(state => state?.allProductReducer?.products);
     const dispatch = useDispatch();
+console.log(allProducts);
+    const getProducts = async () => {
+         await axios.get("http://localhost:5000/products")
+        .then(res =>{
+            dispatch(getAllProducts(res.data));
+            console.log(res)
+        }).catch((err) => console.log(err));
+    }
 
     useEffect(() => {
-        dispatch(getAllProducts())
+        getProducts();
     }, [])
 
     return (

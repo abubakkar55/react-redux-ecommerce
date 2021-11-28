@@ -1,0 +1,40 @@
+// breakpoint up 
+// 640px, 1024px, 1400px
+
+
+@mixin breakpoints-up-medium {
+    @media (min-width: 640px){
+        @content;
+    }
+    }
+@mixin breakpoints-up-large {
+    @media (min-width: 1024px){
+        @content;
+    }
+    }
+    
+@mixin breakpoints-up-xlarge {
+    @media (min-width: 1400px){
+        @content;
+    }
+    }
+
+// breakpoint down 
+// 639px, 1023px, 1399px
+
+@mixin breakpoints-down-medium {
+    @media (max-width: 639px){
+        @content;
+    }
+    }
+@mixin breakpoints-down-large {
+    @media (max-width: 1023px){
+        @content;
+    }
+    }
+    
+@mixin breakpoints-down-xlarge {
+    @media (max-width: 1399px){
+        @content;
+    }
+    }
